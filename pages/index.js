@@ -1,10 +1,12 @@
-import Head from 'next/head'
+import Head from 'next/head';
+import Header from '../components/layout/header';
 
 export default function Home() {
-  
+
   return (
-
-    <div>desdeIndex</div>
-
+    <>
+      <Header />
+      <div>Hero</div>
+    </>
   )
 }
