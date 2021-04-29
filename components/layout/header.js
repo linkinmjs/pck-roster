@@ -1,31 +1,46 @@
 import React from 'react';
+import Link from 'next/link'
 import { Stack, Heading, Button, Flex, Spacer, IconButton, Container, Box } from "@chakra-ui/react";
 
 
 const Header = () => {
     return (
         <>
-            <Container maxW="container.xl" p={4} bg="tomato">
-                <Flex bg="tomato">
-                    <Box>
-                        <Heading size="md">PCK Roster</Heading>
+            <Box bg="teal" px={5} py={6}>
+                <Flex alignItems={'center'}>
+                    <Box color="white">
+                        <Heading size="lg">
+                            <Link href="/">
+                                PCK Roster
+                            </Link>
+                        </Heading>
                     </Box>
                     <Spacer />
                     <Box>
                         <Stack direction="row" spacing={4} align="center">
-                            <Button colorScheme="teal" variant="link">
-                                Link 1
+                            <Button color="white" variant="link">
+                                <Link href="/equipos">
+                                    Equipos
+                                </Link>
                             </Button>
-                            <Button colorScheme="teal" variant="link">
-                                Link 2
+                            <Button color="white" variant="link">
+                                <Link href="/jugadores">
+                                    Jugadores
+                                </Link>
                             </Button>
-                            <Button colorScheme="teal" variant="outline">
-                                Button
+                            <Button
+                                color="white"
+                                variant="outline"
+                                _hover={{ bg: "#319795" }}
+                            >
+                                <Link href="/login">
+                                    Login
+                                </Link>
                             </Button>
                         </Stack>
                     </Box>
                 </Flex>
-            </Container>
+        </Box>
 
         </>
     );
